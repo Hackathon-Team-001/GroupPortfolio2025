@@ -1,0 +1,21 @@
+:root {
+    --text-colour: #000000;
+    --background-colour: #ffffff;
+    --background-image: radial-gradient(at right, rgba(100, 0, 255, 0.7) 0, rgba(255,0,208,.3) 40%, rgba(0,0,0,0) 80%);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-colour: #ffffff;
+        --background-colour: #000000;
+        --background-image: radial-gradient(at right, rgba(100, 0, 255, 0.7) 0, rgba(255,0,208,.3) 40%, rgba(0,0,0,0) 80%);
+    }
+}
+
+html{
+    background-color: var(--background-colour);
+    background-image: var(--background-image);
+    color: var(--text-colour);
+    background-size: 100vw 150vw;
+    /* height: 300vw; */
+}
