@@ -111,20 +111,19 @@ nav ul li a:hover:after{
     width: 100%;
 }
 
-input[type="checkbox"]{
-    display: none;
-}
-
-label{
+#themeBtn{
     height: 40px;
     width: 40px;
     mix-blend-mode: difference;
     overflow: hidden;
     position: relative;
     display: flex;
+    background: none;
+    box-shadow: none;
+    border: none;
 }
 
-label .circle{
+#themeBtn .circle{
     height: 30px;
     width: 30px;
     background-color: white;
@@ -141,12 +140,12 @@ label .circle{
 
 
 /*moon*/
-#circle1{
+#themeBtn #circle1{
     background-color: black;
     z-index: 101;
     transform: translate(-70%, -70%);
 }
 
-label:hover #circle2{
+#themeBtn:hover #circle2{
     background-color: #696969;
 }
