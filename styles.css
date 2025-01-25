@@ -55,3 +55,9 @@ html{
     font-family: 'Nova', Courier, monospace;
     font-size: 5em;
 }
+
+body{
+    max-width: 1440px;
+    margin: 0 auto;
+    /* width: 80%; */
+}
