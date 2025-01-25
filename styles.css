@@ -63,3 +63,36 @@ body{
     margin: 0 auto;
     /* width: 80%; */
 }
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    color: var(--text-colour);
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li a:hover{
+    color: var(--secondary-text-colour);
+}
+nav ul li a:after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-text-colour);
+    transition: width .3s;
+}
+nav ul li a:hover:after{
+    width: 100%;
+}
