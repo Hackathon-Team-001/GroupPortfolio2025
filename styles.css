@@ -110,3 +110,41 @@ nav ul li a:after{
 nav ul li a:hover:after{
     width: 100%;
 }
+
+input[type="checkbox"]{
+    display: none;
+}
+
+label{
+    height: 40px;
+    width: 40px;
+    mix-blend-mode: difference;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+label .circle{
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#circle1{
+    background-color: black;
+    z-index: 101;
+    transform: translate(-70%, -70%);
+}
+
+label:hover #circle2{
+    background-color: #696969;
+}
