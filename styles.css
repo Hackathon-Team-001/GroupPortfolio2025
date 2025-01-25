@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf');
+}
+@font-face {
+    font-family: 'Rubic';
+    src: url('Fonts/Rubik/Rubik-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Nova';
+    src: url('Fonts/Nova_Square/NovaSquare-Regular.ttf');
+}
+
 :root {
     --text-colour: #000000;
     --background-colour: #ffffff;
@@ -12,10 +25,33 @@
     }
 }
 
+h1{
+    font-family: 'Rubic', sans-serif;
+    font-size: 3em;
+    font-weight: 400;
+    color: var(--text-colour);
+}
+
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: var(--text-colour);
+}
+
 html{
     background-color: var(--background-colour);
     background-image: var(--background-image);
     color: var(--text-colour);
     background-size: 100vw 150vw;
     /* height: 300vw; */
+}
+
+
+#main-head{
+    font-family: 'Nova', Courier, monospace;
+    font-size: 5em;
 }
