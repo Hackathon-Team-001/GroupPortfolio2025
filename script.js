@@ -18,14 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Check for saved theme in localStorage
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
-      document.body.classList.add("dark-mode");
+      document.documentElement.classList.add("dark-mode");
     }
   
     themeToggleButton.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
+      document.documentElement.classList.toggle("dark-mode");
   
       // Save the theme preference in localStorage
-      if (document.body.classList.contains("dark-mode")) {
+      if (document.documentElement.classList.contains("dark-mode")) {
         localStorage.setItem("theme", "dark");
       } else {
         localStorage.setItem("theme", "light");
