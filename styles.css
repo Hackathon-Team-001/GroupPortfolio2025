@@ -14,6 +14,8 @@
 :root {
     --text-colour: #000000;
     --background-colour: #ffffff;
+    --secondary-text-colour: #696969;
+    --border-colour: #a9a9a9;
     --background-image: radial-gradient(at right, rgba(100, 0, 255, 0.7) 0, rgba(255,0,208,.3) 40%, rgba(0,0,0,0) 80%);
 }
 
@@ -22,7 +24,6 @@
     --secondary-text-colour: #a9a9a9;
     --border-colour: #696969;
     --background-colour: #000000;
-    --background-image: radial-gradient(at right, rgba(100, 0, 255, 0.7) 0, rgba(255,0,208,.3) 40%, rgba(0,0,0,0) 80%);
     }
 
 h1{
@@ -48,6 +49,8 @@ html{
     color: var(--text-colour);
     background-size: 100vw 150vw;
     /* height: 300vw; */
+    scroll-behavior: smooth;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 
@@ -112,20 +115,22 @@ nav ul li a:hover:after{
 #themeBtn{
     height: 40px;
     width: 40px;
-    mix-blend-mode: difference;
+    mix-blend-mode: lighten;
     overflow: hidden;
     position: relative;
     display: flex;
     background: none;
     box-shadow: none;
     border: none;
+    z-index: 101;
+    transition: all 0.3s ease;
+
 }
 
-#themeBtn .circle{
+#themeBtn img{
     height: 30px;
     width: 30px;
-    background-color: white;
-    border-radius: 50%;
+    /* background-color: white; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,17 +138,9 @@ nav ul li a:hover:after{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -65%);
 }
 
-
-/*moon*/
-#themeBtn #circle1{
-    background-color: black;
-    z-index: 101;
-    transform: translate(-70%, -70%);
-}
-
-#themeBtn:hover #circle2{
-    background-color: #696969;
+#themeBtn:hover{
+    opacity: 0.5;
 }
