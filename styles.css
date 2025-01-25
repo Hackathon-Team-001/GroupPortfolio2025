@@ -138,7 +138,7 @@ nav ul li a:hover:after{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -65%);
+    transform: translate(-50%, -52%);
 }
 
 #themeBtn:hover{
