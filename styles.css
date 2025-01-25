@@ -20,6 +20,8 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --text-colour: #ffffff;
+        --secondary-text-colour: #a9a9a9;
+        --border-colour: #696969;
         --background-colour: #000000;
         --background-image: radial-gradient(at right, rgba(100, 0, 255, 0.7) 0, rgba(255,0,208,.3) 40%, rgba(0,0,0,0) 80%);
     }
