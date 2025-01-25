@@ -80,7 +80,17 @@ nav ul{
     align-items: center;
 }
 
-nav ul li a :hover{
-    color: var(--text-colour);
-
+nav ul li a:hover{
+    color: var(--secondary-text-colour);
+}
+nav ul li a:after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-text-colour);
+    transition: width .3s;
+}
+nav ul li a:hover:after{
+    width: 100%;
 }
