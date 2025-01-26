@@ -12,40 +12,47 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //dark-light theme
-  document.addEventListener("DOMContentLoaded", () => {
-    const themeToggleButton = document.getElementById("themeBtn");
-    const iconImage = document.createElement("img"); // Create an img element
-  
-    // Check for saved theme in localStorage
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      document.documentElement.classList.add("dark-mode");
-      iconImage.src = "icons/moon.png"; 
-    } else {
-      iconImage.src = "icons/sun.png";
-    }
-  
-    // Append the image to the button
-    themeToggleButton.appendChild(iconImage);
-  
-    themeToggleButton.addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark-mode");
-  
-      // Fade out the icon smoothly
-      iconImage.style.opacity = 0;
-  
-      // Change the button icon based on the theme
-      setTimeout(() => {
-        if (document.documentElement.classList.contains("dark-mode")) {
-          localStorage.setItem("theme", "dark");
-          iconImage.src = "icons/moon.png"; // Set moon icon
-        } else {
-          localStorage.setItem("theme", "light");
-          iconImage.src = "icons/sun.png"; // Set sun icon
-        }
-        
-        // Fade in the new icon
-        iconImage.style.opacity = 1;
-      }, 300); // Timeout should match the duration of the opacity transition
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggleButton = document.getElementById("themeBtn");
+  const iconImage = document.createElement("img"); // Create an img element
+  iconImage.style.transition = "opacity 0.3s ease";
+
+  // Check for saved theme in localStorage
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light") {
+    document.documentElement.classList.add("light-mode");
+    iconImage.src = "icons/sun.png";
+  } else {
+    iconImage.src = "icons/moon.png";
+  }
+
+  // Append the image to the button
+  themeToggleButton.appendChild(iconImage);
+
+  themeToggleButton.addEventListener("click", () => {
+    document.documentElement.classList.toggle("light-mode");
+
+    iconImage.style.opacity = 0;
+
+    setTimeout(() => {
+      if (document.documentElement.classList.contains("light-mode")) {
+        localStorage.setItem("theme", "light");
+        iconImage.src = "icons/sun.png";
+      } else {
+        localStorage.setItem("theme", "dark");
+        iconImage.src = "icons/moon.png";
+      }
+
+      iconImage.style.opacity = 1;
+    }, 300); // = duration of the opacity transition
   });
+
+  // Handle screen resize to ensure icon consistency
+  window.addEventListener("resize", () => {
+    if (document.documentElement.classList.contains("light-mode")) {
+      iconImage.src = "icons/sun.png";
+    } else {
+      iconImage.src = "icons/moon.png";
+    }
+  });
+});
